@@ -1,0 +1,25 @@
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+addopts = "-v --tb=short"
+markers = [
+    "unit: fast unit tests (no external services)",
+    "integration: integration tests (may load ML models)",
+]
+
+[tool.coverage.run]
+source = ["src", "config"]
+omit = [
+    "src/frontend/*",
+    "*/test_*",
+    "*/__init__.py",
+]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = false
+exclude_lines = [
+    "pragma: no cover",
+    "if __name__ == .__main__.:",
+    "raise NotImplementedError",
+]

@@ -1,0 +1,260 @@
+{
+  "meta": {
+    "timestamp": "2026-03-18T12:26:09.999526",
+    "ragas_used": true,
+    "ragas_available": true,
+    "total_questions": 10,
+    "evaluated": 10,
+    "skipped": 0,
+    "duration_seconds": 1529.2
+  },
+  "aggregate": {
+    "faithfulness": 0.5268,
+    "answer_relevancy": 0.6912,
+    "context_precision": 0.3,
+    "context_recall": 0.0417,
+    "custom_answer_similarity": 0.361,
+    "custom_keyword_overlap": 0.2622
+  },
+  "per_domain": {
+    "materials_science": {
+      "count": 5,
+      "mean_faithfulness": 0.25,
+      "mean_answer_relevancy": 0.0,
+      "mean_keyword_overlap": 0.2940240311092082,
+      "mean_answer_similarity": 0.36295242112390647
+    },
+    "cybersecurity": {
+      "count": 3,
+      "mean_faithfulness": 0.9285714285714286,
+      "mean_answer_relevancy": 0.9523516527111182,
+      "mean_keyword_overlap": 0.20534429599177798,
+      "mean_answer_similarity": 0.32343184538523784
+    },
+    "cross_domain": {
+      "count": 2,
+      "mean_faithfulness": 0.0,
+      "mean_answer_relevancy": 0.8602811999449763,
+      "mean_keyword_overlap": 0.26800431199360153,
+      "mean_answer_similarity": 0.4126605418391073
+    }
+  },
+  "per_difficulty": {
+    "easy": {
+      "count": 4,
+      "mean_keyword_overlap": 0.33894392315733624,
+      "mean_answer_similarity": 0.49120595549425894
+    },
+    "medium": {
+      "count": 3,
+      "mean_keyword_overlap": 0.13859020310633213,
+      "mean_answer_similarity": 0.1674461646921009
+    },
+    "hard": {
+      "count": 3,
+      "mean_keyword_overlap": 0.2835384551867456,
+      "mean_answer_similarity": 0.3810721364667073
+    }
+  },
+  "per_question": [
+    {
+      "id": "MS-001",
+      "question": "What is the reported bandgap of methylammonium lead iodide (CH3NH3PbI3) perovskite?",
+      "domain": "materials_science",
+      "difficulty": "easy",
+      "negative_case": false,
+      "expected_tool": "document_search",
+      "tools_used": [
+        "document_search"
+      ],
+      "latency_ms": 29525.2,
+      "faithfulness": 0.25,
+      "answer_relevancy": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0,
+      "custom_answer_similarity": 0.4309,
+      "custom_keyword_overlap": 0.2609,
+      "custom_context_coverage": 0.185,
+      "error": null
+    },
+    {
+      "id": "MS-003",
+      "question": "Calculate the molar mass of lithium cobalt oxide (LiCoO2).",
+      "domain": "materials_science",
+      "difficulty": "easy",
+      "negative_case": false,
+      "expected_tool": "materials_calculator",
+      "tools_used": [
+        "materials_calculator"
+      ],
+      "latency_ms": 77056.4,
+      "faithfulness": null,
+      "answer_relevancy": null,
+      "context_precision": null,
+      "context_recall": null,
+      "custom_answer_similarity": 0.5637,
+      "custom_keyword_overlap": 0.4789,
+      "custom_context_coverage": 0.0,
+      "error": null
+    },
+    {
+      "id": "MS-007",
+      "question": "Detect anomalies in these electrical conductivity measurements (S/cm): [1.2, 1.3, 1.1, 8.9, 1.2, 1.1, 1.3, 1.2]",
+      "domain": "materials_science",
+      "difficulty": "medium",
+      "negative_case": false,
+      "expected_tool": "data_anomaly_checker",
+      "tools_used": [
+        "data_anomaly_checker"
+      ],
+      "latency_ms": 18301.1,
+      "faithfulness": null,
+      "answer_relevancy": null,
+      "context_precision": null,
+      "context_recall": null,
+      "custom_answer_similarity": 0.2564,
+      "custom_keyword_overlap": 0.1935,
+      "custom_context_coverage": 0.0,
+      "error": null
+    },
+    {
+      "id": "MS-010",
+      "question": "Calculate the theoretical specific capacity (mAh/g) of a graphite anode assuming full lithiation to LiC6 (molar mass of ",
+      "domain": "materials_science",
+      "difficulty": "hard",
+      "negative_case": false,
+      "expected_tool": "materials_calculator",
+      "tools_used": [
+        "materials_calculator"
+      ],
+      "latency_ms": 13035.4,
+      "faithfulness": null,
+      "answer_relevancy": null,
+      "context_precision": null,
+      "context_recall": null,
+      "custom_answer_similarity": 0.3179,
+      "custom_keyword_overlap": 0.3146,
+      "custom_context_coverage": 0.0,
+      "error": null
+    },
+    {
+      "id": "MS-015",
+      "question": "What is the exact crystal structure and lattice parameters of the newly synthesized compound ZZX-9 described in the most",
+      "domain": "materials_science",
+      "difficulty": "medium",
+      "negative_case": true,
+      "expected_tool": "none",
+      "tools_used": [
+        "document_search"
+      ],
+      "latency_ms": 69443.6,
+      "faithfulness": null,
+      "answer_relevancy": null,
+      "context_precision": null,
+      "context_recall": null,
+      "custom_answer_similarity": 0.246,
+      "custom_keyword_overlap": 0.2222,
+      "custom_context_coverage": 0.0,
+      "error": null
+    },
+    {
+      "id": "CY-001",
+      "question": "What does NIST SP 800-53r5 specify for access control policy and procedures (control AC-1)?",
+      "domain": "cybersecurity",
+      "difficulty": "easy",
+      "negative_case": false,
+      "expected_tool": "document_search",
+      "tools_used": [
+        "document_search"
+      ],
+      "latency_ms": 47212.3,
+      "faithfulness": 0.8571,
+      "answer_relevancy": 0.9298,
+      "context_precision": 1.0,
+      "context_recall": 0.0,
+      "custom_answer_similarity": 0.4891,
+      "custom_keyword_overlap": 0.2446,
+      "custom_context_coverage": 0.3694,
+      "error": null
+    },
+    {
+      "id": "CY-003",
+      "question": "What are the phases of the incident response lifecycle according to NIST Special Publication 800-61?",
+      "domain": "cybersecurity",
+      "difficulty": "easy",
+      "negative_case": false,
+      "expected_tool": "document_search",
+      "tools_used": [
+        "document_search"
+      ],
+      "latency_ms": 35651.2,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.9749,
+      "context_precision": 0.0,
+      "context_recall": 0.0,
+      "custom_answer_similarity": 0.4812,
+      "custom_keyword_overlap": 0.3714,
+      "custom_context_coverage": 0.4153,
+      "error": null
+    },
+    {
+      "id": "CY-010",
+      "question": "What are the specific classified network architecture diagrams and firewall configurations for DoD Secret-level informat",
+      "domain": "cybersecurity",
+      "difficulty": "medium",
+      "negative_case": true,
+      "expected_tool": "none",
+      "tools_used": [],
+      "latency_ms": 6878.0,
+      "faithfulness": null,
+      "answer_relevancy": null,
+      "context_precision": null,
+      "context_recall": null,
+      "custom_answer_similarity": 0.0,
+      "custom_keyword_overlap": 0.0,
+      "custom_context_coverage": 0.0,
+      "error": null
+    },
+    {
+      "id": "XD-001",
+      "question": "What cybersecurity controls should be applied to laboratory information systems storing XRD diffraction data and materia",
+      "domain": "cross_domain",
+      "difficulty": "hard",
+      "negative_case": false,
+      "expected_tool": "document_search",
+      "tools_used": [
+        "document_search"
+      ],
+      "latency_ms": 49368.4,
+      "faithfulness": 0.0,
+      "answer_relevancy": 0.8603,
+      "context_precision": 0.2,
+      "context_recall": 0.1667,
+      "custom_answer_similarity": 0.482,
+      "custom_keyword_overlap": 0.3212,
+      "custom_context_coverage": 0.2573,
+      "error": null
+    },
+    {
+      "id": "XD-005",
+      "question": "What does the 2026 NIST draft standard on quantum-resistant encryption recommend specifically for protecting perovskite ",
+      "domain": "cross_domain",
+      "difficulty": "hard",
+      "negative_case": true,
+      "expected_tool": "none",
+      "tools_used": [
+        "document_search"
+      ],
+      "latency_ms": 48360.3,
+      "faithfulness": null,
+      "answer_relevancy": null,
+      "context_precision": null,
+      "context_recall": null,
+      "custom_answer_similarity": 0.3433,
+      "custom_keyword_overlap": 0.2148,
+      "custom_context_coverage": 0.0,
+      "error": null
+    }
+  ],
+  "errors": []
+}

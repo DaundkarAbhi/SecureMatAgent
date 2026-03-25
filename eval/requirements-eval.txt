@@ -1,0 +1,10 @@
+# Evaluation-only dependencies — install in addition to requirements.txt
+# pip install -r eval/requirements-eval.txt
+
+ragas>=0.2.0
+datasets>=2.14.0
+matplotlib>=3.7.0
+seaborn>=0.13.0
+numpy>=1.24.0
+scikit-learn>=1.3.0
+pandas>=2.0.0

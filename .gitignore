@@ -1,0 +1,84 @@
+# Downloaded corpus documents (large files, not committed)
+data/documents/*.pdf
+data/documents/*.txt
+data/documents/*.md
+data/documents/*.zip
+data/documents/*.tar.gz
+data/documents/_tmp_*/
+
+# Keep only the directory placeholder
+!data/documents/.gitkeep
+
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+.venv/
+venv/
+ENV/
+env/
+dist/
+build/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Environment / secrets
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# Docker
+.dockerignore
+
+# Model caches (sentence-transformers, ollama)
+models/
+models_llm/
+*.bin
+*.pt
+*.onnx
+*.safetensors
+*.gguf
+.ollama/
+
+# Qdrant local storage
+qdrant_storage/
+qdrant_data/
+
+# Logs and traces
+*.log
+logs/
+traces/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# Local / dev artifacts
+result.txt
+.claude/
+my-claude-skills-main/
+SecureMatAgent_*.docx
+SecureMatAgent_Troubleshooting_Log.md
+SecureMatAgent_*.docx
+*.docx

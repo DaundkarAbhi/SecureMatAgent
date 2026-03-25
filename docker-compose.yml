@@ -1,0 +1,55 @@
+version: "3.9"
+
+networks:
+  securematagent-net:
+    driver: bridge
+
+services:
+  qdrant:
+    image: qdrant/qdrant:latest
+    container_name: securematagent-qdrant
+    restart: unless-stopped
+    ports:
+      - "6333:6333"
+      - "6334:6334"
+    volumes:
+      - D:\qdrant_data:/qdrant/storage
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:6333/healthz"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    networks:
+      - securematagent-net
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: securematagent-app
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+      - "8501:8501"
+    depends_on:
+      qdrant:
+        condition: service_healthy
+    environment:
+      - OLLAMA_BASE_URL=http://host.docker.internal:11434
+      - OLLAMA_MODEL=${OLLAMA_MODEL:-mistral}
+      - QDRANT_HOST=qdrant
+      - QDRANT_PORT=6333
+      - COLLECTION_NAME=${COLLECTION_NAME:-securematagent_docs}
+      - EMBEDDING_MODEL=${EMBEDDING_MODEL:-sentence-transformers/all-MiniLM-L6-v2}
+      - CHUNK_SIZE=${CHUNK_SIZE:-512}
+      - CHUNK_OVERLAP=${CHUNK_OVERLAP:-50}
+      - TOP_K=${TOP_K:-5}
+      - MEMORY_WINDOW=${MEMORY_WINDOW:-5}
+      - LOCAL_DEV=false
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - ./data:/app/data:ro
+    networks:
+      - securematagent-net

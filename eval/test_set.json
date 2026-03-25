@@ -1,0 +1,366 @@
+[
+  {
+    "id": "MS-001",
+    "question": "What is the reported bandgap of methylammonium lead iodide (CH3NH3PbI3) perovskite?",
+    "ground_truth_answer": "The bandgap of methylammonium lead iodide (CH3NH3PbI3) perovskite is approximately 1.55 eV, which makes it well-suited for single-junction solar cell applications as it closely matches the optimal bandgap for the Shockley-Queisser limit.",
+    "reference_contexts": [
+      "Methylammonium lead iodide (MAPbI3) has an optical bandgap of approximately 1.55 eV as determined by UV-Vis absorption spectroscopy and Tauc plot analysis. This bandgap is tunable by substituting halide ions.",
+      "The perovskite ABX3 structure with A=CH3NH3, B=Pb, X=I exhibits a direct bandgap near 1.55 eV, enabling efficient light absorption across most of the visible spectrum."
+    ],
+    "expected_tool": "document_search",
+    "domain": "materials_science",
+    "difficulty": "easy",
+    "negative_case": false
+  },
+  {
+    "id": "MS-002",
+    "question": "What XRD peak positions (2-theta) are characteristic of anatase TiO2?",
+    "ground_truth_answer": "Anatase TiO2 shows characteristic XRD diffraction peaks at approximately 25.3° (101), 37.8° (004), 48.0° (200), 53.9° (105), 55.1° (211), and 62.7° (204) when measured with Cu Kα radiation (λ = 1.5406 Å).",
+    "reference_contexts": [
+      "Anatase TiO2 XRD peaks are observed at 2θ = 25.3° (101), 37.8° (004), 48.1° (200), 53.9° (105), 55.1° (211), 62.7° (204) using Cu Kα radiation. The (101) reflection at 25.3° is the most intense and diagnostic for the anatase phase.",
+      "Phase identification by PXRD confirms anatase structure with dominant (101) peak at 25.28° 2theta. Rutile phase would show primary peak at 27.4°."
+    ],
+    "expected_tool": "document_search",
+    "domain": "materials_science",
+    "difficulty": "easy",
+    "negative_case": false
+  },
+  {
+    "id": "MS-003",
+    "question": "Calculate the molar mass of lithium cobalt oxide (LiCoO2).",
+    "ground_truth_answer": "The molar mass of LiCoO2 is calculated as: Li (6.941) + Co (58.933) + 2 × O (15.999) = 6.941 + 58.933 + 31.998 = 97.872 g/mol.",
+    "reference_contexts": [],
+    "expected_tool": "materials_calculator",
+    "domain": "materials_science",
+    "difficulty": "easy",
+    "negative_case": false
+  },
+  {
+    "id": "MS-004",
+    "question": "Using Bragg's law, calculate the diffraction angle (2-theta) for the (110) reflection of BCC iron (lattice parameter a = 2.87 Å) with Cu Kα radiation (λ = 1.54 Å).",
+    "ground_truth_answer": "For BCC Fe (110): d = a/√(h²+k²+l²) = 2.87/√2 = 2.029 Å. Bragg's law: 2d·sin(θ) = λ → sin(θ) = 1.54/(2×2.029) = 0.3794 → θ = 22.3° → 2θ ≈ 44.6°.",
+    "reference_contexts": [],
+    "expected_tool": "materials_calculator",
+    "domain": "materials_science",
+    "difficulty": "medium",
+    "negative_case": false
+  },
+  {
+    "id": "MS-005",
+    "question": "What synthesis methods are described for perovskite solar cells in the literature?",
+    "ground_truth_answer": "Perovskite solar cells are synthesized using several methods: (1) one-step spin-coating from a precursor solution (PbI2 + MAI in DMF/DMSO), (2) two-step sequential deposition where PbI2 is deposited first then converted to perovskite by MAI treatment, (3) vapor deposition / thermal evaporation for planar architectures, and (4) anti-solvent crystallization to improve film quality. Post-deposition annealing at 100-150°C is common to improve crystallinity.",
+    "reference_contexts": [
+      "Perovskite films were fabricated by one-step spin-coating method. A precursor solution of PbI2 and CH3NH3I in DMSO:DMF (1:4) was spin-coated at 4000 rpm for 30 s, followed by annealing at 100°C for 10 min.",
+      "Two-step sequential deposition was used: PbI2 dissolved in DMF was spin-coated, followed by immersion in CH3NH3I isopropanol solution to form MAPbI3 perovskite layer."
+    ],
+    "expected_tool": "document_search",
+    "domain": "materials_science",
+    "difficulty": "hard",
+    "negative_case": false
+  },
+  {
+    "id": "MS-006",
+    "question": "What temperature range is typically used for annealing perovskite thin films during solar cell fabrication?",
+    "ground_truth_answer": "Perovskite thin films are typically annealed at temperatures between 100°C and 150°C for 10–60 minutes. A common reported condition is 100°C for 10 minutes. Higher temperatures (>150°C) can cause decomposition of the perovskite phase into PbI2.",
+    "reference_contexts": [
+      "The perovskite film was annealed at 100°C for 10 min in a nitrogen-filled glovebox to promote crystallization and remove residual solvent.",
+      "Thermal annealing between 100-150°C drives solvent evaporation and grain growth. Temperatures exceeding 200°C lead to irreversible decomposition to PbI2 as indicated by yellowing of the film."
+    ],
+    "expected_tool": "document_search",
+    "domain": "materials_science",
+    "difficulty": "medium",
+    "negative_case": false
+  },
+  {
+    "id": "MS-007",
+    "question": "Detect anomalies in these electrical conductivity measurements (S/cm): [1.2, 1.3, 1.1, 8.9, 1.2, 1.1, 1.3, 1.2]",
+    "ground_truth_answer": "The value 8.9 S/cm is a clear anomaly. The other values cluster around a mean of ~1.2 S/cm with very low variance. The value 8.9 is approximately 6.4 standard deviations above the mean of the remaining data points, indicating a likely measurement error or contamination event.",
+    "reference_contexts": [],
+    "expected_tool": "data_anomaly_checker",
+    "domain": "materials_science",
+    "difficulty": "medium",
+    "negative_case": false
+  },
+  {
+    "id": "MS-008",
+    "question": "What are the main safety hazards of hydrofluoric acid (HF) according to the safety data sheet?",
+    "ground_truth_answer": "Hydrofluoric acid (HF) is extremely hazardous: (1) severe chemical burns to skin and eyes, (2) systemic toxicity — fluoride ions penetrate tissue and can cause fatal hypocalcemia and cardiac arrhythmia even from small exposures, (3) inhalation of HF vapors causes pulmonary edema, (4) requires immediate treatment with calcium gluconate gel. PPE including nitrile gloves, face shield, and chemical-resistant clothing is mandatory.",
+    "reference_contexts": [
+      "Hydrofluoric acid (CAS 7664-39-3): Hazard — causes severe burns; fluoride ion causes systemic toxicity including hypocalcemia. Immediate treatment: calcium gluconate gel applied to affected area. Use in fume hood with full face shield and chemical-resistant gloves.",
+      "HF Emergency: Flush with water for 15 min; apply calcium gluconate antidote; seek medical attention immediately. Ingestion or inhalation can be fatal. Store in polyethylene containers — HF attacks glass."
+    ],
+    "expected_tool": "document_search",
+    "domain": "materials_science",
+    "difficulty": "easy",
+    "negative_case": false
+  },
+  {
+    "id": "MS-009",
+    "question": "What XRD characterization methods are described across the ingested materials science papers?",
+    "ground_truth_answer": "The ingested papers describe multiple XRD characterization methods: (1) powder XRD (PXRD) for phase identification using Bragg-Brentano geometry, (2) grazing incidence XRD (GIXRD) for thin film analysis, (3) Rietveld refinement for lattice parameter extraction and phase quantification, (4) Scherrer analysis of peak broadening for crystallite size estimation, and (5) in-situ XRD for tracking structural changes during synthesis or cycling.",
+    "reference_contexts": [
+      "Powder XRD patterns were collected on a Bruker D8 Advance diffractometer using Cu Kα radiation. Rietveld refinement was performed using GSAS-II software to extract lattice parameters.",
+      "Crystallite size was estimated from XRD peak broadening using the Scherrer equation: D = Kλ/(β·cos θ), where K=0.9 is the shape factor, β is the full width at half maximum (FWHM).",
+      "Grazing incidence XRD (GIXRD) at incidence angle ω = 0.3° was used to probe the thin film structure without substrate interference."
+    ],
+    "expected_tool": "document_search",
+    "domain": "materials_science",
+    "difficulty": "hard",
+    "negative_case": false
+  },
+  {
+    "id": "MS-010",
+    "question": "Calculate the theoretical specific capacity (mAh/g) of a graphite anode assuming full lithiation to LiC6 (molar mass of C = 12.011 g/mol, Faraday constant = 96485 C/mol).",
+    "ground_truth_answer": "LiC6 means 1 Li per 6 carbon atoms. Molar mass of LiC6 = 6×12.011 + 6.941 = 72.066 + 6.941 = 79.007 g/mol. Charge = 1 × 96485 C/mol = 96485 C/mol. Convert to mAh: 96485 / 3600 = 26.80 Ah/mol. Specific capacity = 26800 mAh / 79.007 g = 339.2 mAh/g. The commonly cited value for graphite is ~372 mAh/g (based on slightly different assumptions about C molar mass).",
+    "reference_contexts": [],
+    "expected_tool": "materials_calculator",
+    "domain": "materials_science",
+    "difficulty": "hard",
+    "negative_case": false
+  },
+  {
+    "id": "MS-011",
+    "question": "What is the Scherrer equation and what is it used for in XRD analysis?",
+    "ground_truth_answer": "The Scherrer equation is D = Kλ/(β·cosθ), where D is the mean crystallite size, K is the dimensionless shape factor (~0.9), λ is the X-ray wavelength, β is the line broadening at half maximum intensity (FWHM) in radians, and θ is the Bragg angle. It is used to estimate the mean size of crystalline domains (nanocrystallites) from the peak broadening observed in XRD patterns.",
+    "reference_contexts": [
+      "The Scherrer equation D = Kλ/(β cosθ) relates crystallite size D to peak broadening β, where K≈0.9 for spherical crystallites. This formula is valid for crystallite sizes in the range 1–100 nm.",
+      "Peak width analysis using Scherrer: FWHM values were measured after pseudo-Voigt profile fitting. Instrumental broadening was subtracted using a LaB6 standard before applying the Scherrer formula."
+    ],
+    "expected_tool": "document_search",
+    "domain": "materials_science",
+    "difficulty": "easy",
+    "negative_case": false
+  },
+  {
+    "id": "MS-012",
+    "question": "What power conversion efficiency (PCE) range is reported for perovskite solar cells in recent literature?",
+    "ground_truth_answer": "Recent literature reports perovskite solar cell power conversion efficiencies (PCE) ranging from approximately 18% to 26%. Certified record efficiencies have exceeded 25% for single-junction cells, while tandem perovskite/silicon cells have reached over 33%. Laboratory devices commonly report 20–24% PCE.",
+    "reference_contexts": [
+      "The champion device achieved a power conversion efficiency (PCE) of 24.1% with open-circuit voltage Voc = 1.14 V, short-circuit current Jsc = 24.6 mA/cm², and fill factor FF = 0.86.",
+      "Perovskite solar cell efficiencies have improved from ~3.8% in 2009 to over 25.5% in 2023, making them one of the fastest-advancing photovoltaic technologies."
+    ],
+    "expected_tool": "document_search",
+    "domain": "materials_science",
+    "difficulty": "medium",
+    "negative_case": false
+  },
+  {
+    "id": "MS-013",
+    "question": "Detect anomalies in these lithium-ion battery discharge capacity values (mAh): [245, 248, 252, 12, 249, 251, 247, 250]",
+    "ground_truth_answer": "The value 12 mAh is a clear anomaly. The remaining values cluster around 248–252 mAh. The outlier at 12 mAh is approximately 98% below the mean of the other values (~249 mAh), indicating a likely measurement error, deep discharge event, or sensor malfunction.",
+    "reference_contexts": [],
+    "expected_tool": "data_anomaly_checker",
+    "domain": "materials_science",
+    "difficulty": "easy",
+    "negative_case": false
+  },
+  {
+    "id": "MS-014",
+    "question": "Calculate the Bragg diffraction angle (2-theta) for the (200) reflection of NaCl (a = 5.64 Å) using Cu Kα radiation (λ = 1.5406 Å).",
+    "ground_truth_answer": "For NaCl (200): d = a/√(h²+k²+l²) = 5.64/√(4+0+0) = 5.64/2 = 2.82 Å. Bragg's law: sin(θ) = λ/(2d) = 1.5406/(2×2.82) = 0.2731 → θ = 15.84° → 2θ ≈ 31.7°.",
+    "reference_contexts": [],
+    "expected_tool": "materials_calculator",
+    "domain": "materials_science",
+    "difficulty": "medium",
+    "negative_case": false
+  },
+  {
+    "id": "MS-015",
+    "question": "What is the exact crystal structure and lattice parameters of the newly synthesized compound ZZX-9 described in the most recent proprietary internal synthesis report?",
+    "ground_truth_answer": "I don't have that information in my knowledge base. There is no document about a compound called ZZX-9 or any proprietary internal synthesis report in the indexed corpus. Please check your internal research documents directly.",
+    "reference_contexts": [],
+    "expected_tool": "none",
+    "domain": "materials_science",
+    "difficulty": "medium",
+    "negative_case": true
+  },
+  {
+    "id": "CY-001",
+    "question": "What does NIST SP 800-53r5 specify for access control policy and procedures (control AC-1)?",
+    "ground_truth_answer": "NIST SP 800-53r5 AC-1 requires organizations to: (1) develop, document, and disseminate an access control policy addressing purpose, scope, roles, responsibilities, and compliance; (2) designate an official to manage implementation; (3) review and update the policy at defined frequencies; and (4) develop, document, and disseminate access control procedures to facilitate the policy. The policy must be consistent with applicable laws, executive orders, and regulations.",
+    "reference_contexts": [
+      "AC-1 ACCESS CONTROL POLICY AND PROCEDURES: The organization develops, documents, and disseminates an access control policy that: (a) Addresses purpose, scope, roles, responsibilities, management commitment, coordination, and compliance; (b) Is consistent with applicable laws, Executive Orders, directives, regulations, policies, standards, and guidelines.",
+      "Access control procedures are required to facilitate implementation of the access control policy and associated access controls. Organizations review and update access control policies and procedures at organization-defined frequencies."
+    ],
+    "expected_tool": "document_search",
+    "domain": "cybersecurity",
+    "difficulty": "easy",
+    "negative_case": false
+  },
+  {
+    "id": "CY-002",
+    "question": "What are the minimum password requirements recommended by NIST cybersecurity guidelines?",
+    "ground_truth_answer": "NIST SP 800-63B recommends: (1) minimum 8 characters for user-selected passwords, (2) minimum 6 characters for machine-generated passwords, (3) allow up to at least 64 characters, (4) support all printable ASCII and Unicode characters, (5) check passwords against lists of known-compromised passwords, (6) no composition rules (no mandatory special characters), and (7) no periodic password changes unless compromise is suspected. NIST no longer recommends mandatory complexity requirements.",
+    "reference_contexts": [
+      "NIST SP 800-63B: Memorized secrets (passwords) SHALL be at least 8 characters in length when chosen by the subscriber. Verifiers SHOULD permit subscriber-chosen memorized secrets of at least 64 characters in length.",
+      "NIST recommends against mandatory complexity rules and periodic password resets. Instead, verifiers SHALL compare the prospective secret against a list of known compromised passwords."
+    ],
+    "expected_tool": "document_search",
+    "domain": "cybersecurity",
+    "difficulty": "medium",
+    "negative_case": false
+  },
+  {
+    "id": "CY-003",
+    "question": "What are the phases of the incident response lifecycle according to NIST Special Publication 800-61?",
+    "ground_truth_answer": "NIST SP 800-61 defines the incident response lifecycle as four phases: (1) Preparation — establishing capabilities before incidents occur; (2) Detection and Analysis — identifying and analyzing potential incidents; (3) Containment, Eradication, and Recovery — limiting damage, removing threats, and restoring systems; (4) Post-Incident Activity — lessons learned and process improvement. These phases are iterative and may overlap.",
+    "reference_contexts": [
+      "The NIST incident response lifecycle consists of four phases: Preparation; Detection and Analysis; Containment, Eradication, and Recovery; and Post-Incident Activity. Organizations should be prepared to handle any incident but should focus on major incident types.",
+      "Detection and Analysis phase: Organizations use automated tools including intrusion detection systems, security information and event management (SIEM) systems, and antivirus software to detect incidents."
+    ],
+    "expected_tool": "document_search",
+    "domain": "cybersecurity",
+    "difficulty": "easy",
+    "negative_case": false
+  },
+  {
+    "id": "CY-004",
+    "question": "What physical protection controls does NIST SP 800-171 require for protecting Controlled Unclassified Information (CUI)?",
+    "ground_truth_answer": "NIST SP 800-171 physical protection requirements (3.10.x) include: (1) limit physical access to systems to authorized individuals, (2) protect and monitor the physical facility and support infrastructure, (3) escort and monitor visitors, (4) maintain audit logs of physical access, (5) control and manage physical access devices (keys, combinations, tokens), and (6) enforce safeguarding measures for CUI at alternate work sites.",
+    "reference_contexts": [
+      "3.10.1: Limit physical access to organizational systems, equipment, and the respective operating environments to authorized individuals.",
+      "3.10.2: Protect and monitor the physical facility and support infrastructure for organizational systems. 3.10.3: Escort visitors and monitor visitor activity. 3.10.4: Maintain audit logs of physical access."
+    ],
+    "expected_tool": "document_search",
+    "domain": "cybersecurity",
+    "difficulty": "medium",
+    "negative_case": false
+  },
+  {
+    "id": "CY-005",
+    "question": "What does the NIST Cybersecurity Framework (CSF) v2.0 specify for the IDENTIFY (ID) function?",
+    "ground_truth_answer": "The NIST CSF v2.0 IDENTIFY function focuses on understanding the organization's current cybersecurity risk. It includes categories: ID.AM (Asset Management) — inventorying hardware, software, and data assets; ID.RA (Risk Assessment) — identifying and prioritizing cybersecurity risks; ID.IM (Improvement) — identifying improvements to the organization's cybersecurity posture; and ID.GV (Governance) — establishing cybersecurity policies, roles, and responsibilities.",
+    "reference_contexts": [
+      "IDENTIFY (ID): The organization's current cybersecurity risks are understood. Asset Management (ID.AM): Assets that enable the organization to achieve business purposes are identified and managed. Risk Assessment (ID.RA): The cybersecurity risk to the organization, assets, and individuals is understood.",
+      "NIST CSF v2.0 added the GOVERN function and reorganized IDENTIFY to include the Improvement (ID.IM) category, consolidating improvement-related activities from other functions."
+    ],
+    "expected_tool": "document_search",
+    "domain": "cybersecurity",
+    "difficulty": "easy",
+    "negative_case": false
+  },
+  {
+    "id": "CY-006",
+    "question": "What multi-factor authentication (MFA) requirements does NIST SP 800-171r3 mandate?",
+    "ground_truth_answer": "NIST SP 800-171r3 requirement 3.5.3 mandates use of multi-factor authentication (MFA) for: (1) access to privileged accounts, (2) access to non-privileged accounts via network access, and (3) local access to privileged accounts. MFA requires using two or more of: something you know (password), something you have (token/smart card), or something you are (biometric). Authenticators must meet NIST SP 800-63B AAL2 or higher assurance level.",
+    "reference_contexts": [
+      "3.5.3 USE MULTIFACTOR AUTHENTICATION FOR LOCAL AND NETWORK ACCESS TO PRIVILEGED ACCOUNTS AND FOR NETWORK ACCESS TO NON-PRIVILEGED ACCOUNTS. Multi-factor authentication requires the use of two or more different factors to achieve authentication.",
+      "Authentication factors include: something you know (e.g., password, PIN); something you have (e.g., physical authenticator, cryptographic private key); or something you are (e.g., biometric). MFA is aligned with NIST SP 800-63B AAL2."
+    ],
+    "expected_tool": "document_search",
+    "domain": "cybersecurity",
+    "difficulty": "medium",
+    "negative_case": false
+  },
+  {
+    "id": "CY-007",
+    "question": "What controls does NIST SP 800-53 define for physical and environmental protection (PE control family)?",
+    "ground_truth_answer": "NIST SP 800-53 PE family includes: PE-1 (Policy), PE-2 (Physical Access Authorizations), PE-3 (Physical Access Control), PE-4 (Access Control for Transmission), PE-5 (Access Control for Output Devices), PE-6 (Monitoring Physical Access), PE-8 (Visitor Access Records), PE-9 (Power Equipment and Cabling), PE-10 (Emergency Shutoff), PE-11 (Emergency Power), PE-12 (Emergency Lighting), PE-13 (Fire Protection), PE-14 (Environmental Controls), PE-15 (Water Damage Protection), and PE-16 (Delivery and Removal).",
+    "reference_contexts": [
+      "PE-2 PHYSICAL ACCESS AUTHORIZATIONS: Develop and approve an access authorization list; issue authorization credentials; review access authorization list at organization-defined frequencies.",
+      "PE-3 PHYSICAL ACCESS CONTROL: Enforce physical access authorizations at defined entry/exit points; maintain audit logs; use security safeguards to detect and prevent unauthorized physical access."
+    ],
+    "expected_tool": "document_search",
+    "domain": "cybersecurity",
+    "difficulty": "medium",
+    "negative_case": false
+  },
+  {
+    "id": "CY-008",
+    "question": "What does NIST SP 800-171 require for audit and accountability (control family 3.3)?",
+    "ground_truth_answer": "NIST SP 800-171 audit requirements (3.3.x) include: (1) 3.3.1 — create and retain audit logs to monitor, analyze, investigate, and report unlawful or unauthorized activity; (2) 3.3.2 — ensure the actions of individual users can be uniquely traced; (3) 3.3.3 — review and update logged events; (4) 3.3.4 — alert if audit logging fails; (5) 3.3.5 — correlate audit records from multiple sources; (6) 3.3.6 — provide audit record reduction and report generation; (7) 3.3.7 — provide system capability that compares/synchronizes internal clocks; (8) 3.3.8 — protect audit information from unauthorized access, modification, and deletion.",
+    "reference_contexts": [
+      "3.3.1 Create and retain system audit logs and records to the extent needed to enable the monitoring, analysis, investigation, and reporting of unlawful or unauthorized system activity.",
+      "3.3.2 Ensure that the actions of individual system users can be uniquely traced to those users, so they can be held accountable for their actions."
+    ],
+    "expected_tool": "document_search",
+    "domain": "cybersecurity",
+    "difficulty": "medium",
+    "negative_case": false
+  },
+  {
+    "id": "CY-009",
+    "question": "What is the purpose and structure of security control baselines in NIST SP 800-53B?",
+    "ground_truth_answer": "NIST SP 800-53B provides three control baselines — Low, Moderate, and High — corresponding to the potential impact of a security breach. Low baseline applies when loss of CIA would have limited adverse effects; Moderate when effects would be serious; High when effects would be severe or catastrophic. Organizations tailor baselines using overlays based on specific threats, regulations, or mission requirements. The baselines serve as starting points for the security control selection process in the Risk Management Framework (RMF).",
+    "reference_contexts": [
+      "NIST SP 800-53B provides three security control baselines: LOW IMPACT, MODERATE IMPACT, and HIGH IMPACT. These baselines are derived from the security controls in NIST SP 800-53.",
+      "Organizations use the baselines as a starting point for tailoring control selections based on specific mission/business requirements, threat information, operational environments, and legal requirements."
+    ],
+    "expected_tool": "document_search",
+    "domain": "cybersecurity",
+    "difficulty": "easy",
+    "negative_case": false
+  },
+  {
+    "id": "CY-010",
+    "question": "What are the specific classified network architecture diagrams and firewall configurations for DoD Secret-level information systems described in the NIST documents?",
+    "ground_truth_answer": "I don't have that information in my knowledge base. The NIST documents indexed in this system (SP 800-53, SP 800-171, CSF) are publicly available standards and do not contain classified network architecture diagrams or specific DoD Secret-level firewall configurations. Those details would be in classified documentation not available here.",
+    "reference_contexts": [],
+    "expected_tool": "none",
+    "domain": "cybersecurity",
+    "difficulty": "medium",
+    "negative_case": true
+  },
+  {
+    "id": "XD-001",
+    "question": "What cybersecurity controls should be applied to laboratory information systems storing XRD diffraction data and materials characterization results?",
+    "ground_truth_answer": "Applying NIST SP 800-53/171 principles to materials lab systems: (1) Access Control — enforce role-based access, use MFA for privileged accounts, limit data access to authorized researchers; (2) Audit Logging — log all data access and modification events; (3) Data Integrity — use checksums to verify XRD data files haven't been tampered with; (4) Physical Security — restrict access to instruments and connected computers; (5) Encryption — protect data in transit and at rest, especially for CUI or export-controlled materials data; (6) Backup — maintain 3-2-1 backups of characterization datasets.",
+    "reference_contexts": [
+      "NIST SP 800-171 requirement 3.1.1: Limit system access to authorized users and devices.",
+      "Analytical data integrity is critical: XRD raw files (.raw, .xrdml) should be stored in write-once format and checksummed at acquisition. Chain of custody documentation should be maintained for regulatory compliance."
+    ],
+    "expected_tool": "document_search",
+    "domain": "cross_domain",
+    "difficulty": "hard",
+    "negative_case": false
+  },
+  {
+    "id": "XD-002",
+    "question": "How do NIST access control requirements apply to research databases containing perovskite synthesis parameters and intellectual property?",
+    "ground_truth_answer": "NIST SP 800-171 access control requirements apply to research databases containing proprietary synthesis data: (1) 3.1.1 — limit access to researchers with need-to-know; (2) 3.1.2 — limit system access to types of transactions authorized users are permitted; (3) 3.1.3 — control CUI flow within the system and to external parties; (4) 3.1.5 — employ principle of least privilege; (5) 3.5.3 — use MFA for database access. Export control regulations (EAR/ITAR) may apply if the synthesis data relates to controlled materials.",
+    "reference_contexts": [
+      "3.1.3 CONTROL THE FLOW OF CUI in accordance with approved authorizations. Information flow control prevents information from being transmitted to unauthorized recipients or across unprotected boundaries.",
+      "Research databases containing export-controlled materials science data must comply with both NIST SP 800-171 and applicable export control regulations (EAR/ITAR)."
+    ],
+    "expected_tool": "document_search",
+    "domain": "cross_domain",
+    "difficulty": "hard",
+    "negative_case": false
+  },
+  {
+    "id": "XD-003",
+    "question": "What are the combined safety and cybersecurity requirements for handling hazardous materials data (such as HF acid MSDS information) in digital laboratory systems?",
+    "ground_truth_answer": "Combined requirements include: Physical safety — HF acid MSDS data must be immediately accessible in emergencies (OSHA 29 CFR 1910.1200 right-to-know requirements); Cybersecurity — systems must remain available during emergencies (NIST SP 800-53 CP family: contingency planning); Data integrity — MSDS data must be accurate and unmodified (SI-7: software/information integrity); Access — safety data must be readable by all lab personnel but write-protected from unauthorized modification; Backup — safety data must have offline copies available if digital systems fail.",
+    "reference_contexts": [
+      "Emergency access to Safety Data Sheets (SDS) must be available at all times per OSHA Hazard Communication Standard. Digital SDS systems must have offline backup procedures.",
+      "NIST SP 800-53 CP-9 SYSTEM BACKUP: Conduct backups of user-level and system-level information. CP-10: Provide for recovery and reconstitution of systems to a known state."
+    ],
+    "expected_tool": "document_search",
+    "domain": "cross_domain",
+    "difficulty": "hard",
+    "negative_case": false
+  },
+  {
+    "id": "XD-004",
+    "question": "What incident response procedures should be initiated if anomalous sensor readings are detected in a controlled laboratory environment during battery cycling experiments?",
+    "ground_truth_answer": "Following NIST SP 800-61 incident response phases applied to lab safety: (1) Preparation — establish baseline normal ranges for temperature, voltage, pressure sensors; define alert thresholds; (2) Detection — automated anomaly detection flags readings outside ±3σ; correlate with safety interlocks; (3) Response — immediate: halt experiment if safety thresholds breached; notify lab safety officer; containment: isolate equipment; check for thermal runaway indicators (temperature spike, gas release); (4) Recovery — document anomaly in lab notebook; perform root cause analysis; recalibrate sensors; (5) Post-incident — update safety procedures, adjust anomaly detection thresholds.",
+    "reference_contexts": [
+      "NIST SP 800-61 Detection and Analysis: Organizations should develop criteria for rating incidents. Response to anomalous readings should trigger predefined containment procedures.",
+      "Battery safety protocol: thermal runaway indicators include rapid temperature rise >5°C/min, voltage deviation >10% from expected, elevated gas pressure. Immediate evacuation and fire suppression activation may be required."
+    ],
+    "expected_tool": "document_search",
+    "domain": "cross_domain",
+    "difficulty": "hard",
+    "negative_case": false
+  },
+  {
+    "id": "XD-005",
+    "question": "What does the 2026 NIST draft standard on quantum-resistant encryption recommend specifically for protecting perovskite synthesis intellectual property in cloud laboratory systems?",
+    "ground_truth_answer": "I don't have that information in my knowledge base. There is no 2026 NIST draft standard in the indexed corpus. The NIST post-quantum cryptography standards finalized in 2024 (FIPS 203/204/205) are not specifically tailored to cloud laboratory systems for perovskite research. Please consult current NIST publications directly at nist.gov.",
+    "reference_contexts": [],
+    "expected_tool": "none",
+    "domain": "cross_domain",
+    "difficulty": "hard",
+    "negative_case": true
+  }
+]
